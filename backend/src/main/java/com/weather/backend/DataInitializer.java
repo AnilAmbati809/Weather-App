@@ -30,14 +30,14 @@ public class DataInitializer implements CommandLineRunner {
             Role adminRole = roleRepository.save(Role.builder().name("ADMIN").build());
 
             User user = User.builder()
-                    .email("user@klu.edu")
+                    .email("anil1@gmail.com")
                     .password(passwordEncoder.encode("password"))
                     .roles(Set.of(userRole))
                     .build();
             userRepository.save(user);
 
             User admin = User.builder()
-                    .email("admin@klu.edu")
+                    .email("adminanil@gmail.com")
                     .password(passwordEncoder.encode("admin"))
                     .roles(Set.of(adminRole))
                     .build();
