@@ -29,7 +29,7 @@ jobs:
           context: ./backend
           file: ./backend/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-backend:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/whether-dashboard-backend:latest
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v5
@@ -37,7 +37,7 @@ jobs:
           context: ./weather-frontend
           file: ./weather-frontend/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-frontend:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/whether-dashboard-frontend:latest
 
       # NOT WORKING
       # - name: Deploy to EC2
