@@ -10,7 +10,8 @@ COPY mvnw .
 COPY .mvn .mvn
 COPY pom.xml .
 
-# (Removed go-offline step)
+# Give execute permission to mvnw
+RUN chmod +x mvnw
 
 # Copy source code
 COPY src ./src
