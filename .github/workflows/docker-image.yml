@@ -31,7 +31,7 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/whether-dashboard-backend:latest
 
-      # 🚫 Removed frontend build so pipeline won’t fail
+      #  Removed frontend build so pipeline won’t fail
       # - name: Build and push frontend image
       #   uses: docker/build-push-action@v5
       #   with:
